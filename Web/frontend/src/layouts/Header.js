@@ -46,30 +46,14 @@ class Header extends Component {
               {/* col.// */}
               <div className="col-xl-4 col-lg-4 col-md-6">
                 <div className="widgets-wrap float-md-right">
-                  <div className="widget-header mr-3">
-                    <Link to="/page-profile-main" className="widget-view">
-                      <div className="icon-area">
-                        <i className="fa fa-user" />
-                        <span className="notify">3</span>
-                      </div>
-                      <small className="text"> My profile </small>
-                    </Link>
-                  </div>{" "}
-                  <div className="widget-header mr-3">
-                    <Link to="#" className="widget-view">
-                      <div className="icon-area">
-                        <i className="fa fa-comment-dots" />
-                        <span className="notify">1</span>
-                      </div>
-                      <small className="text"> Message </small>
-                    </Link>
-                  </div>{" "}
+                  
+                  
                   <div className="widget-header mr-3">
                     <Link to="/page-profile-orders" className="widget-view">
                       <div className="icon-area">
-                        <i className="fa fa-store" />
+                        <i className="fa fa-phone" />
                       </div>
-                      <small className="text"> Orders </small>
+                      <small className="text"> Online  </small>
                     </Link>
                   </div>{" "}
                   <div className="widget-header">
@@ -77,7 +61,7 @@ class Header extends Component {
                       <div className="icon-area">
                         <i className="fa fa-shopping-cart" />
                       </div>
-                      <small className="text"> Cart </small>
+                      <small className="text"> Giỏ hàng </small>
                     </Link>
                   </div>
                 </div>
