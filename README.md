@@ -6,3 +6,5 @@
 ### Ngôn ngữ: laravel, javascript
 # Kế hoạch công việc
 ### Tuần 1: Làm giao diện web
+### Tuần 2: Làm giao diện tất cả các trang đơn
+### Tuần 3: Làm backend
