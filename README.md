@@ -8,3 +8,4 @@
 ### Tuần 1: Làm giao diện web
 ### Tuần 2: Làm giao diện tất cả các trang đơn
 ### Tuần 3: Làm backend
+### Tuần 4: Up sản phẩm lên trang chủ
