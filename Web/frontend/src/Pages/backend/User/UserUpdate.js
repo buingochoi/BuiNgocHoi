@@ -60,7 +60,7 @@ function UserUpdate() {
         <div className="card-header">
           <div className="row">
             <div className="col-md-6">
-              <strong className="text-danger">SỬA THƯƠNG HIỆU</strong>
+              <strong className="text-danger">SỬA NGƯỜI DÙNG</strong>
             </div>
             <div className="col-md-6 text-end">
               <button type="submit" className="btn btn-sm btn-success me-3">
@@ -75,7 +75,7 @@ function UserUpdate() {
         <div className="card-body">
           <div className="row">
             <div className="col-md-9">
-              <div className="mb-3"><label htmlFor="name">Tên thương hiệu</label>
+              <div className="mb-3"><label htmlFor="name">Tên người dùng</label>
                 <input
                   type="text"
                   name="name"

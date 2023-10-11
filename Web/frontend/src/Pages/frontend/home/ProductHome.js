@@ -9,7 +9,7 @@ function ProductHome(props) {
   useEffect(function () {
     (async function () {
       await productservice
-        .getProductHome(4, props.category.id)
+        .getProductHome(6, props.category.id)
         .then(function (result) {
           setCategory(result.data.products);
         });

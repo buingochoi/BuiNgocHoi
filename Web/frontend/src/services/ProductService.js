@@ -19,6 +19,9 @@ function getAllByLimit($limit){
     return httpAxios.get('product/index_all/'+$limit);
 
 }
+function getByCatSlug(slug, limit, page=1){
+    return httpAxios.get(`productByCatSlug/${slug}/${limit}/${page}`);
+}
 
 function getById(id){
     return httpAxios.get(`product/show/${id}`);
@@ -41,6 +44,7 @@ const productservice = {
     getProductHome:getProductHome,
     getProductAll:getProductAll,
     getProductBySlug:getProductBySlug,
+    getByCatSlug:getByCatSlug,
     getAll:getAll,
     getById:getById,
     create:create,

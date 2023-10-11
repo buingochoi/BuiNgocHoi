@@ -1,70 +1,53 @@
 import { useEffect, useState } from "react";
-import urlImage from "../../../Config";
+import SliderItem from "../../../components/frontend/SliderItem";
 import sliderservice from "../../../services/SLiderService";
-
-
-
 function Slider() {
-    const [sliders,setSliders]=useState([]);
-
-    useEffect(function(){
-        (async function(){
-            await sliderservice.getByPosition('slideshow').then(function(result)
-            {
-                setSliders(result.data.sliders)
-            });
-        })();
-    },[])
-  return (
-    <div id="carouselExample" className="carousel slide">
-      <div className="carousel-inner">
-        {sliders.map(function (slider, index) {
-          if (index === 0) {
-            return (
-              <div className="carousel-item active" key={index}>
-                <img
-                  src={urlImage+'slider/'+slider.image}
-                  className="d-block w-100"
-                  height={500}
-                  alt={slider.name}
-                />
-              </div>
-            );
-          } else {
-            return (
-              <div className="carousel-item" key={index}>
-                <img
-                  src={urlImage+'slider/'+slider.image}
-                  className="d-block w-100"
-                  height={500}
-                  alt={slider.name}
-                />
-               
-              </div>
-            );
-          }
-        })}
-      </div>
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
+  const [sliders, setSliders] = useState([]);
+  useEffect(function () {
+      (async function () {
+          await sliderservice.getByPosition('sliders').then(function (result) {
+              setSliders(result.data.sliders)
+          });
+      })();
+  }, [])
+  return (  <section className="section-main padding-bottom">
+  {/* ================== COMPONENT SLIDER  BOOTSTRAP  ==================  */}
+  <div
+    id="carousel1_indicator"
+    className="slider-home-banner carousel slide"
+    data-ride="carousel"
+  >
+    <ol className="carousel-indicators carousel-controls"></ol>
+    <div className="carousel-inner">
+      {sliders.map((item, index) => {
+        return <SliderItem location={index} item={item} />;
+      })}
     </div>
-  );
+    <a
+      className="carousel-control-prev carousel-controls"
+      href="#carousel1_indicator"
+      role="button"
+      data-slide="prev"
+    >
+      <span className="carousel-control-prev-icon" aria-hidden="true" />
+      <span className="sr-only">Previous</span>
+    </a>
+    <a
+      className="carousel-control-next carousel-controls"
+      href="#carousel1_indicator"
+      role="button"
+      data-slide="next"
+    >
+      <span className="carousel-control-next-icon" aria-hidden="true" />
+      <span className="sr-only">Next</span>
+    </a>
+  </div>
+  {/* ==================  COMPONENT SLIDER BOOTSTRAP end.// ==================  .// */}
+
+  {/* row.// */}
+
+  {/* card.// */}
+</section> );
 }
 
 export default Slider;

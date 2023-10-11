@@ -15,7 +15,7 @@ function ProductItems(props) {
         </div>
         <div className="product-name p-2">
           <Link to={"/chi-tiet-san-pham/" + props.product.slug}>
-            <h3 className="text-center fs-5 product-name" >{props.product.name}</h3>
+            <h5 className="text-center product-name" >{props.product.name}</h5>
           </Link>
         </div>
         <div className="product-pice p-2 fs-4 ">
@@ -24,14 +24,18 @@ function ProductItems(props) {
               return (
                 <div className="row">
                   <div className="col-6">
-                    <strong className="text-danger fs-5">
+                    <h5>
+                    <strong className="text-danger">
                       {props.product.price_sale}
                       <sup></sup>
                     </strong>
+                    </h5>
                   </div>
                   <div className="col-6 text-end">
-                    <del className="text fs-5">{props.product.price}</del>
+                  <h5>
+                    <del className="text ">{props.product.price}</del>
                     <sup></sup>
+                    </h5>
                   </div>
                 </div>
               );

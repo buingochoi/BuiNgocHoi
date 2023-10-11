@@ -25,10 +25,7 @@ class Header extends Component {
                       name="category_name"
                     >
                       <option value>Tất cả  </option>
-                      <option value="codex">iPhone</option>
-                      <option value="codex">Samsung</option>
-                      <option value="codex">Xiaomi</option>
-                      <option value="codex">Realme</option>
+                      <option value="codex">Smart Phone</option>
                       <option value="comments">iPad</option>
                       <option value="comments">Apple Watch</option>
                       <option value="content">Phụ kiện</option>
